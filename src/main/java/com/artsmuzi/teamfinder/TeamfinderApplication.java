@@ -24,45 +24,4 @@ public class TeamfinderApplication {
 		SpringApplication.run(TeamfinderApplication.class, args);
 	}
 
-	/*@EventListener(ApplicationReadyEvent.class)
-	private void test() {
-		Player player = new Player();
-		PlayerPersonalInfo info = new PlayerPersonalInfo("A","B","www","102", PlayerPosition.ATTACKER);
-		player.setInfo(info);
-		playerRepository.save(player);
-		Team team = new Team();
-		team.setName("aaa");
-		teamRepository.save(team);
-		Field field = new Field();
-		Coordinates coordinates = new Coordinates();
-		coordinates.setX(12.1);
-		coordinates.setY(12.2);
-		field.setCoordinates(coordinates);
-		fieldRepository.save(field);
-
-		teamService.addPlayerToTeam(team.getId(), player.getId());
-		fieldService.addTeamToField(field.getId(), team);
-		List<Team> fieldTeams = fieldService.getFieldTeams(field.getId());
-		fieldTeams.forEach(this::getPlayers);
-
-		//teamService.deletePlayerFromTeam(team.getId(),player);
-
-		//fieldTeams.forEach(this::getPlayers);
-		//teamService.getTeamPlayers(team.getId()).forEach(System.out::println);
-
-		try {
-			String t = tokenService.generateToken( "222");
-			System.out.println( t );
-		} catch (UsernameNotFoundException ex) {
-			ex.printStackTrace();
-		}
-
-
-
-	}
-
-	private void getPlayers(Team team) {
-		System.out.println(teamService.getTeamPlayers(team.getId()));
-	}*/
-
 }
